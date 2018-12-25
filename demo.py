@@ -113,7 +113,7 @@ def createMain(name):
     def change():
         Master.destroy()
         createSelectDialog()
-    Button(Master,text ='Change',command=change,bg='black',fg='white',activebackground='gray30',activeforeground='white').pack();
+    Button(Master,text ='Select Demo',command=change,bg='black',fg='white',activebackground='gray30',activeforeground='white').pack();
     
     Label(Master, text='Delay: ', bg='black',fg='white').pack(side=LEFT);
     w2 = Scale(Master, from_=5, to=200, orient=HORIZONTAL, bg='black',fg='white',troughcolor='gray20',length=750,highlightthickness=0,command=updateDelay)
