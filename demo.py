@@ -103,11 +103,15 @@ def createMain(name):
         my = My_canvas.canvasy(event.y)
         My_canvas.scale('all', mx, my, 0.8, 0.8)
         SCALE *= 0.8
+    def wheel(event):
+        if event.delta>0: zoomOut(event)
+        else: zoomIn(event)
     
     My_canvas.bind('<ButtonPress-1>', moveFrom)
     My_canvas.bind('<B1-Motion>',     moveTo)
     My_canvas.bind('<Button-5>',   zoomOut) 
     My_canvas.bind('<Button-4>',   zoomIn)
+    My_canvas.bind('<MouseWheel>', wheel) 
     
     lbl = Label(Master, text=name, background='black',fg = 'white')
     lbl.pack()
